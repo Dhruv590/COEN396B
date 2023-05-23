@@ -7,7 +7,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 # Read the data
-data = pd.read_csv(r'C:\Users\dhruv\Desktop\SCU\Data-Visulization\Assignment-2\Assignment-2\assign2_wastedata.csv')
+data = pd.read_csv('assign2_wastedata.csv')
 pivot_table = data.pivot_table(index='Date', columns='Substream', values='Volume', aggfunc='sum')
 
 # Group the data by Substream and calculate the total volume for each substream
