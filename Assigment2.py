@@ -26,18 +26,18 @@ fig_treemap = px.treemap(
     title='Waste Stream Distribution'
 )
 
-# Create the interactive heat map using Plotly
-fig_heatmap = go.Figure(data=go.Heatmap(
-    z=pivot_table.values,
-    x=pivot_table.columns,
-    y=pivot_table.index,
-    colorscale='Viridis'))
+# # Create the interactive heat map using Plotly
+# fig_heatmap = go.Figure(data=go.Heatmap(
+#     z=pivot_table.values,
+#     x=pivot_table.columns,
+#     y=pivot_table.index,
+#     colorscale='Viridis'))
 
-# Customize the layout
-fig_heatmap.update_layout(
-    title='Waste Volume Heatmap',
-    xaxis_title='Substream',
-    yaxis_title='Date')
+# # Customize the layout
+# fig_heatmap.update_layout(
+#     title='Waste Volume Heatmap',
+#     xaxis_title='Substream',
+#     yaxis_title='Date')
 
 st.set_page_config(layout="wide")
 
@@ -48,6 +48,6 @@ st.title('Waste Analysis')
 st.header('Interactive Treemap')
 st.plotly_chart(fig_treemap)
 
-# Display heat map 
-st.header('Interactive Heat Map')
-st.plotly_chart(fig_heatmap)
+# # Display heat map 
+# st.header('Interactive Heat Map')
+# st.plotly_chart(fig_heatmap)
